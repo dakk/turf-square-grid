@@ -35,6 +35,7 @@ module.exports = function (bbox, cell, units) {
   var cellWidth = xFraction * (bbox[2] - bbox[0]);
   var yFraction = cell / (distance(point([bbox[0], bbox[1]]), point([bbox[0], bbox[3]]), units));
   var cellHeight = yFraction * (bbox[3] - bbox[1]);
+  cellWidth = cellHeight;
 
   var currentX = bbox[0];
   while (currentX <= bbox[2]) {
